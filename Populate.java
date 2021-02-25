@@ -11,8 +11,17 @@ void addCar(Car car){
     this.car_queue.add(car);
 }
 
-void populateString(){
-    
+Boolean populateString(String curr_string){
+String buffer[] = curr_string.split(" ");
+if(buffer[1].matches("[A-Za-z]+")){
+    Car c = new Car();
+    for(int i=2;i<buffer.length;i++){
+        c.addPath(buffer[i]);
+    }
+    this.addCar(c);
+    return true;
+}
+return false;
 }
 
 Queue<Car> getCarsQueue(){
