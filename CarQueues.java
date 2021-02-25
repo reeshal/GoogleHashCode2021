@@ -1,9 +1,9 @@
 import java.util.*;
 
-public class Populate {
+public class CarQueues {
 Queue<Car> car_queue;
 
-Populate(){
+CarQueues(){
     this.car_queue = new LinkedList<>();
 }
 
